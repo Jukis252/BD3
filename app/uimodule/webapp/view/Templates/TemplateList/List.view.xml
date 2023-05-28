@@ -1,0 +1,53 @@
+<mvc:View xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:t="sap.ui.table" xmlns:core="sap.ui.core" busy="{appView>/busy}" busyIndicatorDelay="{appView>/delay}" height="100%" controllerName="rsf.rsf.controller.Templates.TemplateList.List" displayBlock="true">
+          
+<List noDataText="Drop list items here" id="list1">
+          
+    <items>
+          
+        <StandardListItem type="Navigation" title="1" description="Knygos" icon="sap-icon://picture" id="item6"/>
+          
+    </items>
+          
+</List>
+          
+<List noDataText="Drop list items here" id="list4">
+          
+    <items>
+          
+        <StandardListItem type="Navigation" title="2" description="Masinos" icon="sap-icon://picture" id="item18"/>
+          
+    </items>
+          
+</List>
+          
+<List noDataText="Drop list items here" id="list5">
+          
+    <items>
+          
+        <StandardListItem type="Navigation" title="3" description="Filmai" icon="sap-icon://picture" id="item19"/>
+          
+    </items>
+          
+</List>
+          
+<List noDataText="Drop list items here" id="list7">
+          
+    <items>
+          
+        <StandardListItem type="Navigation" title="4" description="Produktai" icon="sap-icon://picture" id="item21"/>
+          
+    </items>
+          
+</List>
+          
+<List noDataText="Drop list items here" id="list6">
+          
+    <items>
+          
+        <StandardListItem type="Navigation" title="5" description="Zmones" icon="sap-icon://picture" id="item20"/>
+          
+    </items>
+          
+</List>
+          
+</mvc:View>

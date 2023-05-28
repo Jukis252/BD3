@@ -1,0 +1,9 @@
+<mvc:View xmlns:layout="sap.ui.layout" xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%" controllerName="rsf.rsf.controller.Reports.ReportListView.List" displayBlock="true">
+ <layout:VerticalLayout id="idVerticalLayout" class="sapUiContentPadding" width="100%">
+    <HBox id="_IDGenHBox1" alignContent="SpaceBetween" alignItems="Center" justifyContent="End" class="text">
+        <Button xmlns="sap.m" id="_IDGenButton1" text="Modifikuoti" press="onPressModify" class="text"/>
+        <Button id="_IDGenButton2" text="Eksportuoti" press="onPressGenerate" class="sapUiTinyMarginEnd"/>
+    </HBox>
+ </layout:VerticalLayout>
+ <FormattedText htmlText="{text}" id="text2" class="text"/>
+</mvc:View>

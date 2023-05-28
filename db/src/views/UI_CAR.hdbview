@@ -1,0 +1,8 @@
+VIEW "UI_CAR"
+AS SELECT
+    ID,
+    NAME,
+    MODEL,
+    PRICE,
+    RELEASE_DATE
+    FROM DB_CAR

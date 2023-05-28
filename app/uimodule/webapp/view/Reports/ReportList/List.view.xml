@@ -1,0 +1,7 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" height="100%" controllerName="rsf.rsf.controller.Reports.ReportList.List" displayBlock="true">
+<List noDataText="Siuo metu nera ataskaitu" id="list0" items="{path:'/REPORTS',parameters:{select:'ID,NAME,ITEM'}}">
+    <items>
+        <StandardListItem type="Navigation" title="{ID}" description="{NAME}" icon="sap-icon://picture" id="item2" press="onClick"/>
+    </items>
+</List>
+</mvc:View>

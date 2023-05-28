@@ -1,0 +1,9 @@
+VIEW "UI_BOOK"
+AS SELECT
+    ID,
+    NAME,
+    AUTHOR,
+    PRICE,
+    RELEASE_DATE,
+    QUANTITY
+    FROM DB_BOOK

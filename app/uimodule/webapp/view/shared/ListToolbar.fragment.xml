@@ -1,0 +1,86 @@
+<core:FragmentDefinition xmlns="sap.m"
+                         xmlns:core="sap.ui.core">
+    <OverflowToolbar id="_IDGenOverflowToolbar1" class="sapUiNoBorder">
+        <Button id="_IDGenButton1" class="sapUiNoPadding"
+                visible="{= !${ui>/readonly}
+                                &amp;&amp; ${ parts: [{ value: 'add' }, {value: true} ]}
+                                ? true : false }"
+                icon="sap-icon://positive"
+                text="Pridėti"
+                press=".onAddRec"
+                tooltip="Pridėti įrašą"/>
+
+        <Button id="_IDGenButton2" class=""
+                visible="{= !${ui>/readonly}
+                                 &amp;&amp; ${ parts: [{ value: 'delete' }, {value: true} ] }
+                                 ? true : false }"
+                icon="sap-icon://delete"
+                text="Pašalinti pažymėtus"
+                press=".onDeleteSelected"
+                tooltip="Pašalinti pažymėtus įrašus"/>
+
+        <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+
+        <Button id="_IDGenButton3" class=""
+                visible="{= ${ parts: [{ value: 'export' }, {value: true} ] } ? true : false }"
+                icon="sap-icon://excel-attachment"
+                text="Eksportuoti"
+                press=".onExport"
+                tooltip="Eksportuoti duomenis"/>
+
+        <Button id="_IDGenButton4" class="sapUiTinyMarginEnd"
+                enabled="true"
+                icon="sap-icon://refresh"
+                text=""
+                press=".onRefreshTable"
+                tooltip="Atnaujinti duomenis"/>
+
+        <ToggleButton id="_IDGenToggleButton1" icon="sap-icon://increase-line-height"
+                      tooltip="Rodyti pilną stulpelio pavadinimą"
+                      pressed="{ui>/wrapColumns}">
+            <layoutData>
+                <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1" shrinkable="true"/>
+            </layoutData>
+        </ToggleButton>
+
+        <ToggleButton id="_IDGenToggleButton2" icon="sap-icon://resize-horizontal"
+                      tooltip="Rodyti pilnus tekstus eilutėse"
+                      pressed="{ui>/wrapTextColumns}"
+                      class="sapUiTinyMarginEnd">
+            <layoutData>
+                <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData2" shrinkable="true"/>
+            </layoutData>
+        </ToggleButton>
+
+        <ToggleButton id="_IDGenToggleButton3" icon="sap-icon://approvals"
+                      tooltip="Rodyti tik galiojančius įrašus"
+                      press=".onSearch"
+                      pressed="{ui>/validityFilterOn}"
+                      visible="{ui>/validityFilterVisible}"
+                      class="sapUiTinyMarginEnd">
+            <layoutData>
+                <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData3" shrinkable="true"/>
+            </layoutData>
+        </ToggleButton>
+
+        <SearchField id="idSearchInput"
+                     placeholder="Ieškoti"
+                     search=".onSearch"
+                     width="15rem"
+                     class="sapUiTinyMarginBegin sapUiTinyMarginTop sapUiTinyMarginBottom">
+            <layoutData>
+                <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData4" maxWidth="300px"
+                                           shrinkable="true"/>
+            </layoutData>
+        </SearchField>
+
+        <Button id="_IDGenButton5" icon="sap-icon://decline"
+                tooltip="Valyti visus filtrus"
+                press=".onClearAllFilters"/>
+
+        <Text id="idTableTotal"
+              wrapping="false"
+              class="sapUiTinyMarginBegin"
+              text="Iš viso:"/>
+    </OverflowToolbar>
+</core:FragmentDefinition>

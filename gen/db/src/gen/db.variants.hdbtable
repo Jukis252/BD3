@@ -1,0 +1,22 @@
+COLUMN TABLE db_variants (
+  id INTEGER NOT NULL,
+  fileName NVARCHAR(255),
+  fileType NVARCHAR(10),
+  changeType NVARCHAR(40),
+  reference NVARCHAR(100),
+  packageName NVARCHAR(100),
+  content NCLOB,
+  namespace NVARCHAR(100),
+  creation SECONDDATE DEFAULT current_timestamp,
+  originalLanguage NVARCHAR(2),
+  conditions NVARCHAR(254),
+  context NVARCHAR(254),
+  supportGenerator NVARCHAR(100),
+  supportService NVARCHAR(30),
+  supportUser NVARCHAR(100),
+  layer NVARCHAR(20),
+  selector NVARCHAR(255),
+  texts NCLOB,
+  variantName NVARCHAR(255),
+  PRIMARY KEY(id)
+)

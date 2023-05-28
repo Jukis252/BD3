@@ -1,0 +1,6 @@
+VIEW "UI_REPORTS"
+AS SELECT
+    ID,
+    NAME,
+    ITEM
+    FROM "DB_REPORTS"

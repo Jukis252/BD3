@@ -1,0 +1,39 @@
+<mvc:View controllerName="rsf.rsf.controller.App"
+    displayBlock="true"
+          xmlns="sap.m"
+          xmlns:tnt="sap.tnt"
+          xmlns:mvc="sap.ui.core.mvc"
+          height="100%">
+    <tnt:ToolPage id="tnt:ToolPage">
+        <tnt:header>
+			<tnt:ToolHeader id="toolHeader" >
+            <Button id="_IDGenButton1" text="Report System" press="onPress"></Button>
+				<IconTabHeader id="_IDGenIconTabHeader1" 
+                               selectedKey="{nav>/selectedKey}"
+                               items="{nav>/navigation}"
+                               select=".onItemSelect"
+                               mode="Inline">
+                    <layoutData>
+                        <OverflowToolbarLayoutData id="_IDGenOverflowToolbarLayoutData1" priority="NeverOverflow"
+                                                   shrinkable="true"/>
+                    </layoutData>
+                    <items>
+                        <IconTabFilter id="_IDGenIconTabFilter1" 
+                                       items="{path:'nav>items', templateShareable: false}"
+                                       text="{nav>title}"
+                                       key="{nav>key}">
+                            <items>
+                                <IconTabFilter id="_IDGenIconTabFilter2" text="{nav>title}"
+                                               key="{nav>key}"
+                                               enabled="{enabled}"/>
+                            </items>
+                        </IconTabFilter>
+                    </items>
+                </IconTabHeader>
+			</tnt:ToolHeader>
+		</tnt:header>
+        <tnt:mainContents>
+            <App id="idAppControl" />
+        </tnt:mainContents>
+    </tnt:ToolPage>
+</mvc:View>

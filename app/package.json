@@ -1,0 +1,33 @@
+{
+  "name": "approuter",
+  "devDependencies": {
+    "@sap/approuter": "^14.0.0",
+    "@types/node": "^18.14.4",
+    "@ui5/cli": "^3.0.3",
+    "ui5-middleware-cfdestination": "^0.10.8",
+    "ui5-middleware-livereload": "^0.5.8",
+    "ui5-middleware-servestatic": "^0.4.1"
+  },
+  "dependencies": {
+    "@sap/approuter": "^14.0.0",
+    "@sap/hdbext": "^7.7.2",
+    "@sap/xsenv": "^3.4.0",
+    "express": "^4.18.2",
+    "html-to-docx": "^1.8.0",
+    "jszip": "^3.10.1",
+    "tinymce": "^6.4.2"
+  },
+  "ui5": {
+    "dependencies": [
+      "ui5-middleware-cfdestination",
+      "ui5-middleware-livereload",
+      "ui5-middleware-servestatic"
+    ]
+  },
+  "engines": {
+    "node": "^18.0.0"
+  },
+  "scripts": {
+    "start": "node server.js"
+  }
+}

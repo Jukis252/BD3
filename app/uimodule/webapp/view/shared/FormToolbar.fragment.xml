@@ -1,0 +1,35 @@
+<core:FragmentDefinition xmlns="sap.m"
+                         xmlns:core="sap.ui.core">
+
+    <Toolbar id="_IDGenToolbar1">
+        <Title id="_IDGenTitle1" text="{ui>/formTitle} {= ${ui>/id} ? '( #' + ${ui>/id} + ' )' : '' }"/>
+        <ToolbarSpacer id="_IDGenToolbarSpacer1"/>
+
+        <Button id="_IDGenButton1" type="Back"
+                class="sapUiSmallMarginEnd"
+                press=".onGoBack"
+                text="Grįžti"/>
+
+        <Button id="idDeleteButton"
+                icon="sap-icon://delete"
+                visible="{= ${ui>/id} &amp;&amp; !${ui>/readonly}
+                                &amp;&amp; ${ parts: [{ value: 'delete' }, {value: true} ]}
+                                &amp;&amp; !${ui>/stateLock}
+                                ? true : false }"
+                type="Critical"
+                press=".onDelete"
+                text="Pašalinti"/>
+
+        <Button id="idSaveButton"
+                icon="sap-icon://save"
+                visible="{= !${ui>/readonly}
+                                &amp;&amp; ${ parts: [{ value: 'save' }, {value: true} ]}
+                                &amp;&amp; !${ui>/stateLock}
+                                ? true : false }"
+                type="Emphasized"
+                press=".onSave"
+                text="Išsaugoti"/>
+
+    </Toolbar>
+
+</core:FragmentDefinition>

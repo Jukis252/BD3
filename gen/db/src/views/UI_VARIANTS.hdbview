@@ -1,0 +1,21 @@
+VIEW "UI_variants"
+    AS SELECT
+    id,
+    fileName,         
+    fileType,        
+    changeType,       
+    reference,        
+    packageName,      
+    content,          
+    namespace,        
+    creation,         
+    originalLanguage,       
+    context,          
+    supportGenerator, 
+    supportService,   
+    supportUser,      
+    layer,            
+    selector,         
+    texts,            
+    variantName      
+    FROM DB_variants

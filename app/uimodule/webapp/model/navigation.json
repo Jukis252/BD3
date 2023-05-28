@@ -1,0 +1,37 @@
+{
+    "selectedKey":"Templates",
+    "navigation": 
+    [
+        
+        {
+            "title":"Sablonai",
+            "key":"Templates",
+            "items":[
+                {
+                    "title":"Perziureti sablonu sarasa",
+                    "key":"TemplateList"
+                },
+                {
+                    "title":"Sukurti sablona",
+                    "key":"CreateTemplate"
+                }                
+            ]
+
+        },
+        {
+            "title": "Ataskaitos",
+            "key":"Reports",
+            "items": [
+                {
+                    "title": "Perziureti ataskaitu sarasa",
+                    "key": "ReportList"
+                },
+                {
+                    "title": "Sukurti ataskaita su teksto editorium",
+                    "key": "CreateReportText"
+                }
+                
+            ]
+        }
+    ]
+}

@@ -1,0 +1,8 @@
+VIEW "UI_PRODUCT"
+AS SELECT
+    ID,
+    NAME,
+    PRICE,
+    QUANTITY,
+    END_DATE
+    FROM DB_PRODUCT

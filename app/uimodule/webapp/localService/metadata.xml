@@ -1,0 +1,135 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+<edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+<edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+</edmx:Reference>
+<edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+<edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+</edmx:Reference>
+<edmx:DataServices>
+<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="UI">
+<EntityContainer Name="EntityContainer">
+<EntitySet Name="BOOK" EntityType="UI.BOOK"/>
+<EntitySet Name="FILM" EntityType="UI.FILM"/>
+<EntitySet Name="PEOPLE" EntityType="UI.PEOPLE"/>
+<EntitySet Name="PRODUCT" EntityType="UI.PRODUCT"/>
+<EntitySet Name="CAR" EntityType="UI.CAR"/>
+<EntitySet Name="ALLDATA" EntityType="UI.ALLDATA"/>
+<EntitySet Name="REPORTS" EntityType="UI.REPORTS"/>
+<EntitySet Name="variants" EntityType="UI.variants"/>
+</EntityContainer>
+<EntityType Name="BOOK">
+<Key>
+<PropertyRef Name="ID"/>
+</Key>
+<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+<Property Name="NAME" Type="Edm.String" MaxLength="256"/>
+<Property Name="AUTHOR" Type="Edm.String" MaxLength="256"/>
+<Property Name="PRICE" Type="Edm.Int32"/>
+<Property Name="RELEASE_DATE" Type="Edm.DateTimeOffset"/>
+<Property Name="QUANTITY" Type="Edm.Int32"/>
+</EntityType>
+<EntityType Name="FILM">
+<Key>
+<PropertyRef Name="ID"/>
+</Key>
+<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+<Property Name="NAME" Type="Edm.String" MaxLength="256"/>
+<Property Name="AUTHOR" Type="Edm.String" MaxLength="256"/>
+<Property Name="PRICE" Type="Edm.Int32"/>
+<Property Name="RELEASE_DATE" Type="Edm.DateTimeOffset"/>
+</EntityType>
+<EntityType Name="PEOPLE">
+<Key>
+<PropertyRef Name="ID"/>
+</Key>
+<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+<Property Name="FIRST_NAME" Type="Edm.String" MaxLength="256"/>
+<Property Name="LAST_NAME" Type="Edm.String" MaxLength="256"/>
+<Property Name="SALARY" Type="Edm.Int32"/>
+<Property Name="START_DATE" Type="Edm.DateTimeOffset"/>
+</EntityType>
+<EntityType Name="PRODUCT">
+<Key>
+<PropertyRef Name="ID"/>
+</Key>
+<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+<Property Name="NAME" Type="Edm.String" MaxLength="256"/>
+<Property Name="PRICE" Type="Edm.Int32"/>
+<Property Name="QUANTITY" Type="Edm.Int32"/>
+<Property Name="END_DATE" Type="Edm.DateTimeOffset"/>
+</EntityType>
+<EntityType Name="CAR">
+<Key>
+<PropertyRef Name="ID"/>
+</Key>
+<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+<Property Name="NAME" Type="Edm.String" MaxLength="256"/>
+<Property Name="MODEL" Type="Edm.String" MaxLength="256"/>
+<Property Name="PRICE" Type="Edm.Int32"/>
+<Property Name="RELEASE_DATE" Type="Edm.DateTimeOffset"/>
+</EntityType>
+<EntityType Name="ALLDATA">
+<Key>
+<PropertyRef Name="BOOK_ID"/>
+</Key>
+<Property Name="BOOK_ID" Type="Edm.Int32" Nullable="false"/>
+<Property Name="BOOK_NAME" Type="Edm.String" MaxLength="256"/>
+<Property Name="BOOK_PRICE" Type="Edm.Int32"/>
+<Property Name="BOOK_RELEASE_DATE" Type="Edm.DateTimeOffset"/>
+<Property Name="BOOK_QUANTITY" Type="Edm.Int32" Nullable="false"/>
+<Property Name="FILM_ID" Type="Edm.Int32" Nullable="false"/>
+<Property Name="FILM_NAME" Type="Edm.String" MaxLength="256"/>
+<Property Name="FILM_DIRECTOR" Type="Edm.String" MaxLength="256"/>
+<Property Name="FILM_PRICE" Type="Edm.Int32"/>
+<Property Name="FILM_RELEASE_DATE" Type="Edm.DateTimeOffset"/>
+<Property Name="CAR_ID" Type="Edm.Int32" Nullable="false"/>
+<Property Name="MANUFACTURER" Type="Edm.String" MaxLength="256"/>
+<Property Name="CAR_MODEL" Type="Edm.String" MaxLength="256"/>
+<Property Name="CAR_PRICE" Type="Edm.Int32"/>
+<Property Name="CAR_RELEASE_DATE" Type="Edm.DateTimeOffset"/>
+<Property Name="PEOPLE_ID" Type="Edm.Int32" Nullable="false"/>
+<Property Name="PEOPLE_FIRST_NAME" Type="Edm.String" MaxLength="256"/>
+<Property Name="PEOPLE_LAST_NAME" Type="Edm.String" MaxLength="256"/>
+<Property Name="PEOPLE_SALARY" Type="Edm.Int32"/>
+<Property Name="PEOPLE_START_DATE" Type="Edm.DateTimeOffset"/>
+<Property Name="PRODUCT_ID" Type="Edm.Int32" Nullable="false"/>
+<Property Name="PRODUCT_NAME" Type="Edm.String" MaxLength="256"/>
+<Property Name="PRODUCT_PRICE" Type="Edm.Int32"/>
+<Property Name="PRODUCT_QUANTITY" Type="Edm.Int32"/>
+<Property Name="PRODUCT_EXPIRE_DATE" Type="Edm.DateTimeOffset"/>
+</EntityType>
+<EntityType Name="REPORTS">
+<Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+<Property Name="NAME" Type="Edm.String" MaxLength="256"/>
+<Property Name="ITEM" Type="Edm.String" MaxLength="4999"/>
+</EntityType>
+<EntityType Name="variants">
+<Key>
+<PropertyRef Name="id"/>
+</Key>
+<Property Name="id" Type="Edm.Int32" Nullable="false"/>
+<Property Name="fileName" Type="Edm.String" MaxLength="255"/>
+<Property Name="fileType" Type="Edm.String" MaxLength="10"/>
+<Property Name="changeType" Type="Edm.String" MaxLength="40"/>
+<Property Name="reference" Type="Edm.String" MaxLength="100"/>
+<Property Name="packageName" Type="Edm.String" MaxLength="100"/>
+<Property Name="content" Type="Edm.String"/>
+<Property Name="namespace" Type="Edm.String" MaxLength="100"/>
+<Property Name="creation" Type="Edm.DateTimeOffset"/>
+<Property Name="originalLanguage" Type="Edm.String" MaxLength="2"/>
+<Property Name="conditions" Type="Edm.String" MaxLength="254"/>
+<Property Name="context" Type="Edm.String" MaxLength="254"/>
+<Property Name="supportGenerator" Type="Edm.String" MaxLength="100"/>
+<Property Name="supportService" Type="Edm.String" MaxLength="30"/>
+<Property Name="supportUser" Type="Edm.String" MaxLength="100"/>
+<Property Name="layer" Type="Edm.String" MaxLength="20"/>
+<Property Name="selector" Type="Edm.String" MaxLength="255"/>
+<Property Name="texts" Type="Edm.String"/>
+<Property Name="variantName" Type="Edm.String" MaxLength="255"/>
+</EntityType>
+<Annotations Target="UI.variants/creation">
+<Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+</Annotations>
+</Schema>
+</edmx:DataServices>
+</edmx:Edmx>

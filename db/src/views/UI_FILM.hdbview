@@ -1,0 +1,8 @@
+VIEW "UI_FILM"
+AS SELECT
+    ID,
+    NAME,
+    AUTHOR,
+    PRICE,
+    RELEASE_DATE
+    FROM DB_FILM

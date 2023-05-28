@@ -1,0 +1,31 @@
+<mvc:View controllerName="rsf.rsf.controller.Templates.Main"
+          xmlns:mvc="sap.ui.core.mvc"
+          xmlns="sap.m"
+          xmlns:tnt="sap.tnt"
+          busy="{appView>/busy}"
+          busyIndicatorDelay="{appView>/delay}"
+          height="100%">
+    <Page id="_IDGenPage1" showHeader="false">
+        <content>
+            <Label id="_IDGenLabel1" text="{navigation}"/>
+            <tnt:ToolPage id="_IDGenToolPage1">
+                <tnt:sideContent>
+                    <tnt:SideNavigation id="_IDGenSideNavigation1" expanded="false"
+                                        itemSelect=".onNavItemSelect">
+                        <tnt:NavigationList id="_IDGenNavigationList1" items="{path: 'nav>/navigation/0/items'}"
+                                            selectedKey="{nav>/selectedKey}">
+                            <tnt:NavigationListItem id="_IDGenNavigationListItem1" text="{nav>title}"
+                                                    key="{nav>key}"
+                                                    icon="{nav>icon}"/>
+                        </tnt:NavigationList>
+                    </tnt:SideNavigation>
+                </tnt:sideContent>
+                <tnt:mainContents>
+                    <NavContainer id="idTemplatesNavContainer">
+                        <pages/>
+                    </NavContainer>
+                </tnt:mainContents>
+            </tnt:ToolPage>
+        </content>
+    </Page>
+</mvc:View>

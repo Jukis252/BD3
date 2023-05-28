@@ -1,0 +1,18 @@
+{
+  "welcomeFile": "index.html",
+  "authenticationMethod": "none",
+  "routes": [
+    {
+      "source": "^/ui/(.*)$",
+      "authenticationType": "none",
+      "target": "$1",
+      "destination": "ui",
+      "csrfProtection": false
+    },
+    {
+      "source": "^/(.*)",
+      "localDir": "app/uimodule/webapp",
+      "csrfProtection": false
+    }
+  ]
+}
