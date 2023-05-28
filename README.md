@@ -1,3 +1,9 @@
+Šis darbas yra Justino Plauškos bakalaurinio darbo kodas
+
+Sistemos paleidimas ir diegimas galimas tik SAP HANA platformoje. Įgyvendintos sistemos prototipo demonstracija versija įdiegta privačioje SAP HANA aplinkoje.
+Dėl prieigos ir demonstracijos, kreiptis į justinas.plauska@stud.vilniustech.lt
+
+
 # Getting Started
 
 Welcome to your new project.
